@@ -30,5 +30,10 @@ public class UserDetailServcieImpl implements UserDetailsService{
 		
 		return MyUserPrincipal.build(user);
 	}
+	
+	public User getById(Long id) {
+		User user = userRepository.findById(id).get();
+		return user;
+	}
 
 }
